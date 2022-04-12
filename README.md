@@ -17,3 +17,6 @@ node_positions : Array of size number_of_nodes*4. Column 1: node id. Columns 2-4
 edge_list_tree: Reduced edge_list, where each node corresponds to either a branching point or a termination point or the root node
 
 node_positions_tree : node positions for the reduced branching tree.
+
+### To run the code:
+Open in Matlab (tested in version 2020a and earlier releases) and pres RUN.
