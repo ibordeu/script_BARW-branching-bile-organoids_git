@@ -1,6 +1,8 @@
 # Human branching cholangiocyte organoids recapitulate functional bile duct formation. 
 ## Roos et al. Cell Stem Cell (2022)
 
+[![DOI](https://zenodo.org/badge/480988499.svg)](https://zenodo.org/badge/latestdoi/480988499)
+
 Simulation of the three-dimensional (3d) branching-annihilating random walk
 considering: tip-duct repulsion, a refractory period for branching and
 terminations, and a typical tip size at branching. For details, see
