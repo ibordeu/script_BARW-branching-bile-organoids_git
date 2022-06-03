@@ -201,7 +201,7 @@ function [new_pos,new_angle] = update_particle_position(part_pos,part_angle,nois
 % update particle position, considering a random noise (on the sphere) with
 % amplitude noise_amplitude
 part_angle(1) = part_angle(1) + 2*(rand()-0.5)*noise_amplitude;
-part_angle(2) = part_angle(2) + acos(1 - 2*rand())*noise_amplitude;
+part_angle(2) = part_angle(2) + (acos(1 - 2*rand())-pi/2)*noise_amplitude;
 new_pos = part_pos + [sin(part_angle(1))*cos(part_angle(2)) sin(part_angle(1))*sin(part_angle(2)) cos(part_angle(1))];
 new_angle = part_angle;
 end
@@ -211,7 +211,7 @@ function [new_part_pos,new_part_angle,h] = update_particle_position_avoid(node_p
 % amplitude noise_amplitude, and considering tip-duct repulsion, which acts
 % over a radius annihil_radius*repulsion_thresh with "strength" repulsion_strength
 new_part_angle(1) = part_angle(1) + 2*(rand()-0.5)*noise_amplitude;
-new_part_angle(2) = part_angle(2) + 2*(rand()-0.5)*noise_amplitude;
+new_part_angle(2) = part_angle(2) + (acos(1 - 2*rand())-pi/2)*noise_amplitude;
 new_part_pos = part_pos + [sin(new_part_angle(1))*cos(new_part_angle(2)) sin(new_part_angle(1))*sin(new_part_angle(2)) cos(new_part_angle(1))];
 % find tracers that act on the moving tip
 trace_pos = node_positions(:,2:end);
